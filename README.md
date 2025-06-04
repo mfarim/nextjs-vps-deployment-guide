@@ -116,6 +116,16 @@ pm2 start npm --name "nextapp" -- start -p 4300
 pm2 save
 ```
 
+PM2 Auto Restart when Server Reboot:
+```bash
+pm2 startup
+# Then PM2 will show command like this:
+sudo env PATH=$PATH:/Users/your-user/.nvm/versions/node/v18.0.0/bin pm2 startup launchd -u your-user --hp /Users/your-user
+# Copy and running those command in the terminal.
+pm2 save
+```
+
+
 ---
 
 ## 🌐 4. NGINX Reverse Proxy + Free SSL (Let's Encrypt)
